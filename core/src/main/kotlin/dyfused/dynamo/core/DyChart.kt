@@ -1,28 +1,28 @@
 package dyfused.dynamo.core
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.fasterxml.jackson.annotation.JsonTypeName
+import com.fasterxml.jackson.annotation.JsonRootName
 
-@JsonTypeName("CMap")
+@JsonRootName("CMap")
 data class DyChart(
 	@JsonProperty("m_path")
-	val path: String,
+	var path: String,
 	@JsonProperty("m_mapID")
-	val chartId: String,
+	var chartId: String,
 	@JsonProperty("m_leftRegion")
-	val leftType: SideType,
+	var leftType: SideType,
 	@JsonProperty("m_rightRegion")
-	val rightType: SideType,
+	var rightType: SideType,
 	@JsonProperty("m_notes")
-	val mainNoteSet: DyNoteSet,
+	var mainNoteSet: DyNoteSet,
 	@JsonProperty("m_notesLeft")
-	val leftNoteSet: DyNoteSet,
+	var leftNoteSet: DyNoteSet,
 	@JsonProperty("m_notesRight")
-	val rightNoteSet: DyNoteSet,
+	var rightNoteSet: DyNoteSet,
 	@JsonProperty("m_timeOffset")
-	val timeOffset: Double,
+	var timeOffset: Double,
 	@JsonProperty("m_barPerMin")
-	val barPerMinute: Double,
+	var barPerMinute: Double,
 	@JsonProperty("m_argument")
-	val argument: Any,
+	var argument: Any,
 )

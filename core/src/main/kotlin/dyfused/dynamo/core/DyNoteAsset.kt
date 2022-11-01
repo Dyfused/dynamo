@@ -8,15 +8,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class DyNoteAsset(
 	@JsonProperty("m_id")
-	val id: Int,
+	var id: Int,
 	@JsonProperty("m_type")
-	val type: NoteType,
+	var type: NoteType,
 	@JsonProperty("m_subId")
-	val subId: Int,
+	var subId: Int,
 	@JsonProperty("m_width")
-	val width: Double,
+	var width: Double,
 	@JsonProperty("m_time")
-	val time: Double,
+	var time: Double,
 	@JsonProperty("m_position")
-	val position: Double,
+	var position: Double,
 )
